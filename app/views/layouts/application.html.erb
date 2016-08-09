@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag 'nav.css' %>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
@@ -18,23 +18,46 @@
 
 	      <!-- Collect the nav links, forms, and other content for toggling -->
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav">
+	    		<div class="navbar-header">
+    	      <a class="navbar-brand" href="#">
+    	        <%= image_tag "eca_logo.png" %>
+    	      </a>
+	    	  </div>
+	        <ul class="nav navbar-nav" id="eca-nav">
 	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Order Information</a>
 	            <ul class="dropdown-menu">
-	              <li><a href="#">Action</a></li>
-	              <li><a href="#">Another action</a></li>
-	              <li><a href="#">Something else here</a></li>
+	              <li><a href="#">Teacher Names Updates</a></li>
 	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Separated link</a></li>
+	              <li><a href="#">Your Kit Orders</a></li>
 	              <li role="separator" class="divider"></li>
-	              <li><a href="#">One more separated link</a></li>
+	              <li><a href="#">Your Delivery Schedule</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">Material Data Safety Sheets</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">Email Archives</a></li>
 	            </ul>
 	          </li>
 	        </ul>
-	        <ul class="nav navbar-nav navbar-right">
+	        <ul class="nav navbar-nav" id="eca-nav">
 	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Service</a>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">Getting Started</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">FAQs</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">How It Works</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">(Service Features)</a></li>
+	              <li role="separator" class="divider"></li>
+	              <li><a href="#">Contact Us</a></li>
+	            </ul>
+	          </li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right" id="eca-nav">
+	          <li class="dropdown">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account</a>
 	            <ul class="dropdown-menu">
 	              <li><a href="#">Action</a></li>
 	              <li><a href="#">Another action</a></li>
@@ -47,6 +70,18 @@
 	      </div><!-- /.navbar-collapse -->
 	    </div><!-- /.container-fluid -->
 	  </nav>
+	  <!-- END NAVIGATION MENU -->
+	  <div class="parallax"></div>
+
+	  <div style="height:500px;background-color:red;font-size:36px">
+		  Scroll Up and Down this page to see the parallax scrolling effect.
+		  This div is just here to enable scrolling.
+		  Tip: Try to remove the background-attachment property to remove the scrolling effect.
+	  </div>
+
+	  <div class="parallax"></div>
+
+
     <%= yield %>
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

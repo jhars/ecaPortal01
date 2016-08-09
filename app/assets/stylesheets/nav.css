@@ -1,0 +1,25 @@
+body,html {
+  /*background-image: url('/assets/bg_kits.jpg');*/
+  /*background-repeat: no-repeat;*/
+  height: 100%;
+}
+
+#eca-nav {
+  margin-top: 82px;
+}
+
+.parallax {
+    /* The image used */
+    /*background-image: url('img_parallax.jpg');*/
+    background-image: url('/assets/bg_kits.jpg');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
