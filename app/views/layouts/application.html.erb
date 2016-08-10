@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'nav' %>
     <%= stylesheet_link_tag 'nav.css' %>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,67 +24,100 @@
     	        <%= image_tag "eca_logo.png" %>
     	      </a>
 	    	  </div>
-	        <ul class="nav navbar-nav" id="eca-nav">
-	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Order Information</a>
-	            <ul class="dropdown-menu">
-	              <li><a href="#">Teacher Names Updates</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Your Kit Orders</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Your Delivery Schedule</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Material Data Safety Sheets</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Email Archives</a></li>
-	            </ul>
-	          </li>
-	        </ul>
-	        <ul class="nav navbar-nav" id="eca-nav">
-	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Service</a>
-	            <ul class="dropdown-menu">
-	              <li><a href="#">Getting Started</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">FAQs</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">How It Works</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">(Service Features)</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Contact Us</a></li>
-	            </ul>
-	          </li>
-	        </ul>
-	        <ul class="nav navbar-nav navbar-right" id="eca-nav">
-	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account</a>
-	            <ul class="dropdown-menu">
-	              <li><a href="#">Action</a></li>
-	              <li><a href="#">Another action</a></li>
-	              <li><a href="#">Something else here</a></li>
-	              <li role="separator" class="divider"></li>
-	              <li><a href="#">Separated link</a></li>
-	            </ul>
-	          </li>
-	        </ul>
+
+	    	  <ul class="nav navbar-nav nav-left" id="eca-nav">
+	    	    <li class="dropdown">
+	    	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Order Information</a>
+	    	      <ul class="dropdown-menu">
+	    	        <li><a href="#">Teacher Names Updates</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Your Kit Orders</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Your Delivery Schedule</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Material Data Safety Sheets</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Email Archives</a></li>
+	    	      </ul>
+	    	    </li>
+	    	  </ul>
+
+	    	  <ul class="nav navbar-nav" id="eca-nav">
+	    	    <li class="dropdown">
+	    	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Service</a>
+	    	      <ul class="dropdown-menu">
+	    	        <li><a href="#">Getting Started</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">FAQs</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">How It Works</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">(Service Features)</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Contact Us</a></li>
+	    	      </ul>
+	    	    </li>
+	    	  </ul>
+
+	    	  <ul class="nav navbar-nav navbar-right" id="eca-nav">
+	    	      <a href="#" role="button"><button class="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Sign In</button></a>
+	    	  </ul>
+
+	    	  <ul class="nav navbar-nav navbar-right" id="eca-nav">
+	    	    <li class="dropdown">
+	    	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account</a>
+	    	      <ul class="dropdown-menu">	    	        
+	    	        <li><a href="#">Signup</a></li>
+	    	        <li role="separator" class="divider"></li>
+	    	        <li><a href="#">Change Password</a></li>
+								<li role="separator" class="divider"></li>
+	    	        <li><a href="#">Settings</a></li>
+	    	      </ul>
+	    	    </li>
+	    	  </ul>
+
 	      </div><!-- /.navbar-collapse -->
 	    </div><!-- /.container-fluid -->
 	  </nav>
 	  <!-- END NAVIGATION MENU -->
 	  <div class="parallax"></div>
 
-	  <div style="height:500px;background-color:red;font-size:36px">
-		  Scroll Up and Down this page to see the parallax scrolling effect.
-		  This div is just here to enable scrolling.
-		  Tip: Try to remove the background-attachment property to remove the scrolling effect.
-	  </div>
+	  <div style="height:500px;background-color:#d3d3d3;font-size:36px">
+		  
 
-	  <div class="parallax"></div>
+		  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		    <div class="modal-dialog" role="document">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+		        </div>
+		        <div class="modal-body">
+		          <form>
+		            <div class="form-group">
+		              <label for="recipient-name" class="control-label">Email</label>
+		              <input type="text" class="form-control" id="recipient-name">
+		            </div>
+		            <div class="form-group">
+		              <label for="message-text" class="control-label">Password</label>
+		              <textarea class="form-control" id="message-text"></textarea>
+		            </div>
+		          </form>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		          <button type="button" class="btn btn-primary">Submit</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+
 
 
     <%= yield %>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

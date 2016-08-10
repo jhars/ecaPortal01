@@ -4,22 +4,55 @@ body,html {
   height: 100%;
 }
 
+.navbar-header {
+  margin-right: 25px;
+}
+
+.nav {
+  font-size: 20;
+  color: #080361;
+}  
+
 #eca-nav {
   margin-top: 82px;
 }
 
+ul {
+  text-align: center;
+  padding-right: 10px;
+  color: #080361;
+}
+li {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  color: #080361;
+}
+a {
+ color: #080361; 
+}
+
 .parallax {
-    /* The image used */
-    /*background-image: url('img_parallax.jpg');*/
     background-image: url('/assets/bg_kits.jpg');
-
     /* Full height */
-    height: 100%;
-
+    height: 300px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: -50px;
 }
 
+/*========= MODAL ==========*/
+.button {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 12px;
+    color: #080361;
+    /*font-size: 16px;*/
+}
