@@ -83,6 +83,8 @@
 	  <div class="parallax"></div>
 
 	  <div style="height:500px;background-color:#d3d3d3;font-size:36px">
+
+	      <%= yield %>
 		  
 
 		  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -93,7 +95,7 @@
 		          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
 		        </div>
 		        <div class="modal-body">
-		          <form>
+<!-- 		          <form>
 		            <div class="form-group">
 		              <label for="recipient-name" class="control-label">Email</label>
 		              <input type="text" class="form-control" id="recipient-name">
@@ -102,7 +104,22 @@
 		              <label for="message-text" class="control-label">Password</label>
 		              <textarea class="form-control" id="message-text"></textarea>
 		            </div>
-		          </form>
+		          </form> -->
+		          <% if current_user %>
+		            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+		          <% else %>
+		            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+
+
+		            <%= form_tag '/login' do %>
+
+		              Email: <%= text_field_tag :email %>
+		              Password: <%= password_field_tag :password %>
+		              <%= submit_tag "Submit" %>
+
+		            <% end %>
+		          <% end %>
+
 		        </div>
 		        <div class="modal-footer">
 		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -116,7 +133,6 @@
 
 
 
-    <%= yield %>
     <!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
