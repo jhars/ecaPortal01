@@ -76,6 +76,11 @@
 	  <!-- END NAVIGATION MENU -->
 	  <div class="parallax"></div>
 	  <div style="height:500px;background-color:#d3d3d3;font-size:36px">
+		  <% if current_user %>
+		    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+		  <% else %>
+		    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+		  <% end %>
 		<!-- ###################################################### -->
 	   <!-- ################ --><%= yield %><!-- ################ -->
 	   <!-- ###################################################### -->

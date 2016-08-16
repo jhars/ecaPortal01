@@ -14,23 +14,23 @@ class TestUsersController < ApplicationController
   # def edit
   # end
 
-  def new
-  end
+  # def new
+  # end
 
-  def create
-    test_user = TestUser.new(user_params)
-    if test_user.save
-      session[:user_id] = test_user.id
-      redirect_to '/'
-    else
-      redirect_to '/signup'
-    end
-  end
+  # def create
+  #   test_user = TestUser.new(user_params)
+  #   if test_user.save
+  #     session[:user_id] = test_user.id
+  #     redirect_to '/'
+  #   else
+  #     redirect_to '/signup'
+  #   end
+  # end
 
-  private
+  # private
 
-  def user_params
-    params.require(:test_user).permit(:name, :email, :password, :password_confirmation)
-  end
+  # def user_params
+  #   params.require(:test_user).permit(:name, :email, :password, :password_confirmation)
+  # end
 
 end

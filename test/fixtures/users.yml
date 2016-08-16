@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  lname: MyString
+  district_id: 1
+  school_id: 1
+  grade: 1
+  email: MyString
+  password_digest: MyString
+  permission_level: MyString
+  student_count: 1
+
+two:
+  fname: MyString
+  lname: MyString
+  district_id: 1
+  school_id: 1
+  grade: 1
+  email: MyString
+  password_digest: MyString
+  permission_level: MyString
+  student_count: 1
