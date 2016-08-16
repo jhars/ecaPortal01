@@ -8,12 +8,9 @@
     <%= javascript_include_tag 'nav' %>
     <%= stylesheet_link_tag 'nav.css' %>
   </head>
-
   <body>
-  
 	  <nav class="navbar navbar-default">
 	    <div class="container-fluid">
-
 	      <!-- Collect the nav links, forms, and other content for toggling -->
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    		<div class="navbar-header">
@@ -78,12 +75,10 @@
 	  </nav>
 	  <!-- END NAVIGATION MENU -->
 	  <div class="parallax"></div>
-
 	  <div style="height:500px;background-color:#d3d3d3;font-size:36px">
-
-	      <%= yield %>
-		  
-
+		<!-- ###################################################### -->
+	   <!-- ################ --><%= yield %><!-- ################ -->
+	   <!-- ###################################################### -->
 		  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 		    <div class="modal-dialog" role="document">
 		      <div class="modal-content">
@@ -92,22 +87,16 @@
 		          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
 		        </div>
 		        <div class="modal-body">
-
 		          <% if current_user %>
 		            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
 		          <% else %>
 		            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-
-
 		            <%= form_tag '/login' do %>
-
 		              Email: <%= text_field_tag :email %>
 		              Password: <%= password_field_tag :password %>
 		              <%= submit_tag "Submit" %>
-
 		            <% end %>
 		          <% end %>
-
 		        </div>
 		        <div class="modal-footer">
 		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -116,8 +105,6 @@
 		      </div>
 		    </div>
 		  </div>
-
 		</div>
-
   </body>
 </html>
