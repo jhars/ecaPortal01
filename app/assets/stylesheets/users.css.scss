@@ -1,0 +1,29 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-body {
+  font-size: 20px;
+  margin: auto;
+  width: 60%;
+  /*border: 3px solid #f5750f;*/
+  display: block;
+}
+
+#signup-header {
+  text-align: center;
+}
+
+input {
+  /*padding:10px;*/
+  /*margin:auto;*/
+  /*text-align:center;*/
+  width: 100%;
+  /*margin-bottom: 50px;*/
+
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

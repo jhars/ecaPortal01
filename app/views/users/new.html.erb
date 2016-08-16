@@ -1,12 +1,29 @@
+<div class="modal show">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span><%= link_to " ", '/login' %></button> -->
+        <h4 class="modal-title" id="exampleModalLabel"><%= link_to "Already have an account?", '/login' %></h4>
+      </div>
+      <div class="modal-body">
+      	<h1 id="signup-header">Signup</h1><hr>
+	      
+	      <%= form_for :user, url: '/users' do |f| %>
+	        <%= f.text_field :email, :placeholder => "Email" %><br>
+	        
+	        <%= f.text_field :school_district, :placeholder => "School District" %><br> <!-- Auto Complete Action Here -->
+	        <%= f.text_field :school, :placeholder => "Current School" %><br> <!-- Auto Complete Action Here -->
+	        <%= f.select :grade, ['Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade', '6th Grade', '7th Grade', '8th Grade', 'High School'], {}, :class => "dropper-downer" %><br>
+	        
+	        <%= f.text_field :phone, :placeholder => "Cell Phone #" %><br>
+	        <%= f.password_field :password, :placeholder => "Password" %><br>
+	        <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %><br>
+	        <%= f.submit "Submit" %><br>
 
-<h1>Signup!</h1>
+	      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_for :user, url: '/users' do |f| %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-
-<% end %>

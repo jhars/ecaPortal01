@@ -1,0 +1,43 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-body {
+  font-size: 20px;
+  margin: auto;
+  width: 60%;
+  position:relative;
+  /*border: 3px solid #f5750f;*/
+  /*display: block;*/
+}
+
+#signup-header {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  /*margin-bottom: 50px;*/
+  /*display: block;*/
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.dropper-downer {
+  background-color: white;
+  width: 100%;
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  outline: 1px solid #CCC;
+  background-color: white;
+  color: #a9a9a9;
+  padding-left: 20px;
+}
