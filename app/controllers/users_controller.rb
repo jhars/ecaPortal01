@@ -3,9 +3,12 @@ class UsersController < ApplicationController
   end
 
   def create
-  	user = User.new(user_params)
+    attributes = user_params
+  	user = User.new(attributes)
     if user.save
-      user[:grade] = grade_level(user_params[:grade])
+      user[:grade] = grade_level(attributes[:grade])
+      # user[:school_district] = school_district(attributes[:school_district])
+      # user[:school] = school(attributes[:school])
   		session[:user_id] = user.id
   		redirect_to '/'
   	else

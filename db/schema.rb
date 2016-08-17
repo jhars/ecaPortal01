@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20160816220231) do
   create_table "schools", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "school_id"
     t.string   "school_name"
-    t.integer  "district_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "district_id"
   end
 
   create_table "test_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20160816220231) do
     t.string   "fname"
     t.string   "lname"
     t.integer  "district_id"
-    t.integer  "school_id"
     t.integer  "grade"
     t.string   "email"
     t.string   "password_digest"
@@ -50,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160816220231) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "phone"
+    t.integer  "school_id"
   end
 
 end
