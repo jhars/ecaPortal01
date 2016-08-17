@@ -54,20 +54,10 @@
 	    	  </ul>
 
 	    	  <ul class="nav navbar-nav navbar-right" id="eca-nav">
-	    	      <a href="#" role="button"><button class="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Sign In</button></a>
-	    	  </ul>
-
-	    	  <ul class="nav navbar-nav navbar-right" id="eca-nav">
-	    	    <li class="dropdown">
-	    	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account</a>
-	    	      <ul class="dropdown-menu">	    	        
-	    	        <li><a href="#">Signup</a></li>
-	    	        <li role="separator" class="divider"></li>
-	    	        <li><a href="#">Change Password</a></li>
-								<li role="separator" class="divider"></li>
-	    	        <li><a href="#">Settings</a></li>
-	    	      </ul>
-	    	    </li>
+	    	      <!-- <a href="#" role="button"><button class="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Logout</button></a> -->
+	    	      <% if current_user %>
+	    	      	<%= current_user.email %> | <%= link_to "Logout", '/logout'%>
+	    	      <% end %>
 	    	  </ul>
 
 	      </div><!-- /.navbar-collapse -->
