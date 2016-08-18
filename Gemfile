@@ -50,5 +50,4 @@ gem "awesome_print", require:"ap"
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'jquery-ui-rails'
 

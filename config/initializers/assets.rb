@@ -12,4 +12,3 @@ Rails.application.config.assets.precompile += %w( nav.css )
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( nav.js )
-Rails.application.config.assets.precompile += %w( districts.js )
