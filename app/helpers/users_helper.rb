@@ -1,14 +1,4 @@
 module UsersHelper
-	def assign_district(district_input)
-		@user[:district_id] = 1
-	  @district = District.where(district_name: district_input).last
-	end
-
-	def assign_school(school_input)
-		@user.school_id = 2
-	  @school = School.where(school_id: school_input).last
-	end
-	
 	def grade_level(grade_input)
 	  grade_translator = {
 	    'Kindergarten' => 0,
