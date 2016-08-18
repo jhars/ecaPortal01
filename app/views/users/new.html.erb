@@ -9,8 +9,12 @@
 	      
 	      <%= form_for :user, url: '/users' do |f| %>
 	        <%= f.text_field :email, :placeholder => "Email" %><br>	        
-	        <%= f.text_field :school_district, :placeholder => "School District" %><br> <!-- Auto Complete Action Here -->
-	        <%= f.text_field :school, :placeholder => "Current School" %><br> <!-- Auto Complete Action Here -->
+	        
+	        <%= f.select :district, @districts.collect {|d| d.district_name }, {}, :class => "dropper-downer" %><br> <!-- Auto Complete Action Here -->
+	        <%= f.select :school, @schools.collect {|s| s.school_name }, {}, :class => "dropper-downer" %><br> <!-- Auto Complete Action Here -->
+	        
+
+
 	        <%= f.select :grade, ['Kindergarten', '1st Grade', '2nd Grade', '3rd Grade', '4th Grade', '5th Grade', '6th Grade', '7th Grade', '8th Grade', 'High School'], {}, :class => "dropper-downer" %><br>
 	        <%= f.text_field :phone, :placeholder => "Cell Phone #" %><br>
 	        <%= f.password_field :password, :placeholder => "Password" %><br>
